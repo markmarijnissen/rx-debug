@@ -5,9 +5,9 @@ import Rx from 'rxjs';
 Rx.Observable.prototype.debug = function debug(name){
 
   let stream = this.do({
-    next: v => console.log(`%c${name}`,'color: #8cb8af;', v),
-    error: err => console.log(`%c${name}.error:`,'color: red;', err),
-    complete: () => console.log(`%c${name}.completed`,'color: green;')
+    next: v => console.log('%c'+name,'color: #8cb8af;', v),
+    error: err => console.log('%c'+name+'error:','color: red;', err),
+    complete: () => console.log('%c'+name+'completed.','color: green;')
   });
   if(process.env !== 'PRODUCTION'){
     const subject = new Rx.Subject;
