@@ -1,4 +1,4 @@
-import Rx from 'rxjs';
+var Rx = require('rxjs');
 
 // Utility to log
 /* eslint no-console: "off" */
